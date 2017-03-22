@@ -1,0 +1,1 @@
+/Users/aztek/kyckling/goodies/kyckling.vim
