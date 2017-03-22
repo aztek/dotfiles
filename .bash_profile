@@ -51,3 +51,7 @@ fooltest() {
 }
 
 alias boogie='mono ~/boogie/Binaries/Boogie.exe'
+
+export PATH=$BRAZIL_CLI_BIN:$PATH
+
+export PATH=$PATH:/apollo/env/SDETools/bin/:/Users/ekotelni/Downloads/z3-4.5.0-x64-osx-10.11.6/bin
