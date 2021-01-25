@@ -16,6 +16,8 @@ then
   brew install git
 fi
 
-git clone https://github.com/aztek/dotfiles "$HOME/dotfiles"
+DOTFILES="$HOME/dotfiles"
+git clone https://github.com/aztek/dotfiles "$DOTFILES"
 
-exec "$HOME/dotfiles/init.sh"
+"$DOTFILES/essentials.sh"
+"$DOTFILES/link.sh"
