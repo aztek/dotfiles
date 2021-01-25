@@ -1,0 +1,39 @@
+{
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2,
+    "editor.renderIndentGuides": false,
+    "editor.wordWrap": "on",
+    "editor.suggestSelection": "first",
+    "editor.autoIndent": "none",
+    "editor.rulers": [80, 100, 120],
+
+    "window.zoomLevel": 0,
+
+    "workbench.sideBar.location": "right",
+
+    "terminal.integrated.fontSize": 16,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDelete": false,
+
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.o": true,
+        "**/*.hi": true
+    },
+
+    "breadcrumbs.enabled": false,
+
+    "git.autoStash": true,
+    "git.enableCommitSigning": true
+}

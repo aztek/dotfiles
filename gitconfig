@@ -1,0 +1,52 @@
+[user]
+    name = Evgenii Kotelnikov
+    email = evgeny.kotelnikov@gmail.com
+
+[color "diff-highlight"]
+    newhighlight = green bold 22
+    newnormal = green bold
+    oldhighlight = red bold 52
+    oldnormal = red bold
+
+[color "diff"]
+    commit = yellow bold
+    frag = magenta bold
+    meta = 11
+    new = green bold
+    old = red bold
+    whitespace = red reverse
+
+[color]
+    ui = auto
+    branch = auto
+    status = auto
+
+[core]
+    excludesfile = ~/.gitignore
+    pager = diff-so-fancy | less --tabs=4 -RFX
+
+[log]
+    abbrevcommit = true
+    decorate = short
+    date = relative
+
+[pager]
+    diff = diff-so-fancy | less --jump-target=2 --tabs=4 -RFXSG --pattern '^(Date|added|deleted|modified): '
+
+[grep]
+    lineNumber = true
+
+[pull]
+    rebase = true
+
+[push]
+    default = simple
+
+[rebase]
+    autostash = true
+
+[credential]
+    helper = osxkeychain
+
+[alias]
+    co = checkout
