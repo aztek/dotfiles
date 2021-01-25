@@ -2,10 +2,6 @@
 
 set -x
 
-install_executables ack diff-so-fancy exa fish jq shellcheck ssh-copy-id vim
-install_fira_code
-init_vim
-
 install_executables() {
   brew install "$@"
 }
@@ -32,3 +28,7 @@ init_vim() {
 
   vim '+PlugInstall' '+qall!'
 }
+
+install_executables ack diff-so-fancy exa fish jq shellcheck ssh-copy-id vim
+install_fira_code
+init_vim
