@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'doums/darcula'
