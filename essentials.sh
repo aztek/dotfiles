@@ -22,6 +22,12 @@ install_ttf() {
   cp "$TTF" "$FONT_DIR"
 }
 
+init_fish() {
+  FISH=$(which fish)
+  sudo echo "$FISH" >>/etc/shells
+  chsh -s "$FISH"
+}
+
 init_vim() {
   curl --fail --location --output "$HOME/.vim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -30,5 +36,6 @@ init_vim() {
 }
 
 install_executables ack diff-so-fancy exa fish jq shellcheck ssh-copy-id vim
+init_fish
 install_fira_code
 init_vim
