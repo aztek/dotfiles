@@ -33,6 +33,8 @@ augroup END
 " let &t_EI = "\<Esc>]25;l\x7"
 " au VimLeave * silent !echo -ne "\033]112\007"
 
+set backspace=indent,eol,start
+
 set updatetime=100             " Write swap file every 100ms
 
 " set laststatus=2
