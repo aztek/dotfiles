@@ -1,6 +1,7 @@
 # Abbreviations
 abbr --add g     git
 abbr --add gr    'git rebase'
+abbr --add gri   'git rebase --interactive'
 abbr --add gita  'git add'
 abbr --add gitl  'git log'
 abbr --add gitd  'git diff'
