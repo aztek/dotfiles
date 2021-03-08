@@ -12,5 +12,3 @@ abbr --add vi vim
 
 alias l='exa -ahl --group-directories-first'
 alias lt='l -T'
-
-source (dirname (status --current-filename))/git.fish

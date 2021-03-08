@@ -1,3 +1,4 @@
+echo gitgitgit
 # Abbreviations
 abbr --add g     git
 abbr --add gr    'git rebase'
