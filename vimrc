@@ -7,6 +7,7 @@ Plug 'doums/darcula'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'dag/vim-fish'
 call plug#end()
 
 colorscheme darcula
