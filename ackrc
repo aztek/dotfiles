@@ -1,1 +1,3 @@
 --ignore-dir=.idea
+--type-set=lcm=.lcm
+--type-set=bazel=.bazel
