@@ -30,12 +30,12 @@ init_fish() {
 
 init_vim() {
   curl --fail --location --output "$HOME/.vim/autoload/plug.vim" --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | bash
 
   vim '+PlugInstall' '+qall!'
 }
 
-install_executables ack diff-so-fancy exa fish jq shellcheck ssh-copy-id vim
+install_executables ack coreutils diff-so-fancy exa fish gnu-sed gnu-tar jq shellcheck ssh-copy-id vim wget
 init_fish
 install_fira_code
 init_vim
