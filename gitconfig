@@ -49,5 +49,8 @@
     # protip: during interactive rebase in vim type re over the rebase command
     # to change it to e
 
+[alias]
+    co = checkout
+
 [credential]
     helper = osxkeychain
