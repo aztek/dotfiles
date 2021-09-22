@@ -51,6 +51,7 @@
 
 [alias]
     co = checkout
+    cp = cherry-pick
 
 [credential]
     helper = osxkeychain
