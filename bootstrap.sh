@@ -1,14 +1,15 @@
 #!/bin/sh
 
 # Usage:
-# curl -fsSL https://github.com/aztek/dotfiles/raw/master/bootstrap.sh
+# /bin/bash -c "$(curl -fsSL https://github.com/aztek/dotfiles/raw/master/bootstrap.sh)"
 
-set -x
+set -ex
 
 if ! command -v brew
 then
-  curl --fail --silent --show-error --location \
-    https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.profile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if ! command -v git

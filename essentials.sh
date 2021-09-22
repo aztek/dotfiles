@@ -1,30 +1,10 @@
 #!/bin/sh
 
-set -x
-
-install_executables() {
-  brew install "$@"
-}
-
-install_fira_code() {
-  TMP_DIR=$(mktemp -d)
-  git clone --depth 1 --branch master https://github.com/tonsky/FiraCode "$TMP_DIR"
-  for TTF in "$TMP_DIR/distr/ttf"/*
-  do
-    install_ttf "$TTF"
-  done
-  rm -rf "$TMP_DIR"
-}
-
-install_ttf() {
-  TTF=$1
-  FONT_DIR="$HOME/Library/Fonts"
-  cp "$TTF" "$FONT_DIR"
-}
+set -ex
 
 init_fish() {
   FISH=$(which fish)
-  sudo echo "$FISH" >>/etc/shells
+  echo "$FISH" | sudo tee -a /etc/shells
   chsh -s "$FISH"
 }
 
@@ -35,7 +15,7 @@ init_vim() {
   vim '+PlugInstall' '+qall!'
 }
 
-install_executables ack coreutils diff-so-fancy exa fish gnu-sed gnu-tar jq shellcheck ssh-copy-id vim wget
+brew tap homebrew/cask-fonts
+brew install ack coreutils diff-so-fancy exa font-fira-code fish gnu-sed gnu-tar jq shellcheck ssh-copy-id vim wget
 init_fish
-install_fira_code
 init_vim
