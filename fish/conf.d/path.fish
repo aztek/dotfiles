@@ -1,4 +1,5 @@
 set -gx PATH /usr/local/bin $PATH
+set -gx PATH /usr/X11/bin $PATH
 
 # Ada
 if test -d ~/opt/GNAT/2020/bin
