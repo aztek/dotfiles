@@ -11,6 +11,11 @@ if test -d ~/Library/Haskell/bin
   set -gx PATH $PATH ~/Library/Haskell/bin
 end
 
+# Homebrew
+if test -f /opt/homebrew/bin/brew
+  eval (/opt/homebrew/bin/brew shellenv)
+end
+
 # GHC
 if test -f ~/.ghcup/env
   source ~/.ghcup/env
