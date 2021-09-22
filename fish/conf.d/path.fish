@@ -11,6 +11,11 @@ if test -d ~/Library/Haskell/bin
   set -gx PATH $PATH ~/Library/Haskell/bin
 end
 
+# GHC
+if test -f ~/.ghcup/env
+  source ~/.ghcup/env
+end
+
 # OPAM
 if test -f ~/.opam/opam-init/init.fish
   source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
