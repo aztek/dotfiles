@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Usage:
-# /bin/bash -c "$(curl -fsSL https://github.com/aztek/dotfiles/raw/master/bootstrap.sh)"
-
 set -ex
 
 if ! command -v brew

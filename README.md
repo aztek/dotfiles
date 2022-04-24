@@ -14,3 +14,7 @@ My dotfiles
 - [jq](https://stedolan.github.io/jq/)
 - [ShellCheck](https://www.shellcheck.net/)
 
+Set up on a new system by running the following.
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/aztek/dotfiles/master/bootstrap.sh)"
+```
