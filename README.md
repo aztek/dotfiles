@@ -1,17 +1,27 @@
-My dotfiles
-===
+# My dotfiles
 
+## System
 - macOS
-- [iTerm2](https://iterm2.com/)
-- [Fira Code](https://github.com/tonsky/FiraCode)
-- [Fish shell](https://fishshell.com/)
 - [Homebrew](https://brew.sh/)
+- [Git](https://git-scm.com/)
+- [Fira Code](https://github.com/tonsky/FiraCode)
+
+## Shell
+- [iTerm2](https://iterm2.com/)
+- [Fish shell](https://fishshell.com/)
+- [ack](https://beyondgrep.com/) ("better grep")
+- [exa](https://github.com/ogham/exa) ("better ls")
+- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) ("better diff")
+- [jq](https://stedolan.github.io/jq/)
+- [ncdu](https://dev.yorhel.nl/ncdu)
+
+## Editors
 - [Vim](https://www.vim.org/)
 - [VS Code](https://code.visualstudio.com/)
 - [IntelliJ Idea](https://www.jetbrains.com/idea/)
-- [Git](https://git-scm.com/)
-- [ack](https://beyondgrep.com/) ("better grep"), [exa](https://github.com/ogham/exa) ("better ls"), [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) ("better diff")
-- [jq](https://stedolan.github.io/jq/)
+
+## Extras
+- [Graphviz](https://www.graphviz.org/)
 - [ShellCheck](https://www.shellcheck.net/)
 
 Set up on a new system by running the following.

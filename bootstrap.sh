@@ -18,4 +18,5 @@ DOTFILES="$HOME/dotfiles"
 git clone https://github.com/aztek/dotfiles "$DOTFILES"
 
 "$DOTFILES/essentials.sh"
+"$DOTFILES/extras.sh"
 "$DOTFILES/link.sh"
