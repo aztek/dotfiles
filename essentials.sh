@@ -12,7 +12,7 @@ init_vim() {
   curl --fail --location --output "$HOME/.vim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | bash
 
-  vim '+PlugInstall' '+qall!'
+  vim -es '+PlugInstall' '+qall!'
 }
 
 brew tap homebrew/cask-fonts
