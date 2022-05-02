@@ -4,7 +4,10 @@ set -ex
 
 init_fish() {
   FISH=$(which fish)
-  echo "$FISH" | sudo tee -a /etc/shells
+  if test -z "$(grep "$FISH" /etc/shells)"
+  then
+    echo "$FISH" | sudo tee -a /etc/shells
+  fi
   chsh -s "$FISH"
 }
 
