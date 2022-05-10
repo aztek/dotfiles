@@ -2,6 +2,6 @@ Host *
   UseKeychain yes
   ForwardAgent yes
   AddKeysToAgent yes
-  IdentityFile id_rsa
+  IdentityFile ~/.ssh/id_rsa
 
 Include hosts
