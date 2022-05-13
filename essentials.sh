@@ -3,12 +3,12 @@
 set -ex
 
 init_fish() {
-  FISH=$(which fish)
+  FISH=$(command -v fish)
   if test -z "$(grep "$FISH" /etc/shells)"
   then
     echo "$FISH" | sudo tee -a /etc/shells
   fi
-  chsh -s "$FISH"
+  chsh -s "$FISH" || true
 }
 
 init_vim() {
