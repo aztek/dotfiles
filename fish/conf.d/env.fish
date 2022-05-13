@@ -1,5 +1,7 @@
 set -gx PATH /usr/local/bin $PATH
 set -gx PATH /usr/X11/bin $PATH
+set -gx PATH ~/.cargo/bin $PATH
+set -gx PATH ~/.fnm $PATH
 
 # Ada
 if test -d ~/opt/GNAT/2020/bin
@@ -28,6 +30,11 @@ end
 # OPAM
 if test -f ~/.opam/opam-init/init.fish
   source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
+end
+
+# node.js
+if test -d ~/.fnm
+  eval (fnm env)
 end
 
 # Misc
