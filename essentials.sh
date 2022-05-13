@@ -18,7 +18,15 @@ init_vim() {
   vim -es '+PlugInstall' '+qall!'
 }
 
-brew tap homebrew/cask-fonts
-brew install ack coreutils diff-so-fancy exa font-fira-code fish gnu-sed gnu-tar gpg ssh-copy-id vim wget
+if [ "$(uname)" = "Darwin" ]
+then
+  brew tap homebrew/cask-fonts
+  brew install ack coreutils diff-so-fancy exa font-fira-code fish gnu-sed gnu-tar gpg ssh-copy-id vim wget
+else
+  sudo add-apt-repository ppa:aos1/diff-so-fancy --yes
+  sudo apt-get update --assume-yes
+  sudo apt install --assume-yes ack fish diff-so-fancy
+  cargo install exa
+fi
 init_fish
 init_vim
