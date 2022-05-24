@@ -2,10 +2,11 @@
     "editor.fontSize": 16,
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
+    "editor.guides.indentation": false,
+    "editor.inlineSuggest.enabled": true,
     "editor.lineHeight": 26,
     "editor.renderWhitespace": "boundary",
     "editor.tabSize": 2,
-    "editor.renderIndentGuides": false,
     "editor.wordWrap": "on",
     "editor.suggestSelection": "first",
     "editor.rulers": [
