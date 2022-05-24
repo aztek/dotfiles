@@ -17,10 +17,14 @@
     "workbench.editor.tabCloseButton": "off",
     "workbench.colorTheme": "Darcula Theme from IntelliJ",
     "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "terminal.integrated.shell.linux": "/usr/bin/fish",
-    "terminal.integrated.automationShell.osx": "/usr/local/bin/fish",
-    "terminal.integrated.automationShell.linux": "/usr/bin/fish",
+    "terminal.integrated.automationProfile.linux": {
+        "path": "/usr/bin/fish"
+    },
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.automationProfile.osx": {
+        "path": "/usr/local/bin/fish"
+    },
+    "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontSize": 17,
     "terminal.integrated.fontWeight": "100",
@@ -42,6 +46,7 @@
         "**/.idea": true
     },
     "breadcrumbs.enabled": false,
+    "gitlens.currentLine.enabled": false,
     "git.autoStash": true,
     "git.enableCommitSigning": true
 }
