@@ -19,6 +19,6 @@ init_vim() {
 }
 
 brew tap homebrew/cask-fonts
-brew install ack coreutils diff-so-fancy exa font-fira-code fish gnu-sed gnu-tar ssh-copy-id vim wget
+brew install ack coreutils diff-so-fancy exa font-fira-code fish gnu-sed gnu-tar gpg ssh-copy-id vim wget
 init_fish
 init_vim
