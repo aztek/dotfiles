@@ -2,4 +2,5 @@
 --type-set=lcm=.lcm
 --type-set=bazel=.bazel-all
 --type-set=bazel=.bazel
+--type-set=bazel:is:BUILD
 --type-set=bzl=.bzl
