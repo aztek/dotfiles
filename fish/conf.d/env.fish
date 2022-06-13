@@ -3,6 +3,8 @@ set -gx PATH /usr/X11/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
 set -gx PATH ~/.fnm $PATH
 
+set -gx GPG_TTY (tty)
+
 # Ada
 if test -d ~/opt/GNAT/2020/bin
   set -gx PATH ~/opt/GNAT/2020/bin $PATH
