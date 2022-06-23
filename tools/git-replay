@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+if ! git rev-parse --is-inside-work-tree >/dev/null; then
+  exit 1
+fi
+
+commit_sha=$(git rev-parse HEAD)
+commit_msg=$(git log --format=%B -n 1 HEAD)
+
+#if ! grep --ignore-case --quiet '^Auto-Commit:\s*Yes' <<<"$commit_msg"; then
+#  echo "Nothing to replay (no Auto-Commit attribute)"
+#  exit 0
+#fi
+
+literate() {
+  indent=''
+  while IFS= read -r line; do
+    if test -z "$indent"; then
+      line_indent=$(grep -E --only-matching '^\s+' <<<"$line")
+      if test -n "$line_indent"; then
+        indent=$line_indent
+      fi
+    fi
+
+    if test -n "$indent"; then
+      script_line=$(sed -E -n "s/^$indent(.*)/\1/p" <<<"$line")
+      if test -n "$script_line"; then
+        echo "$script_line"
+      fi
+    fi
+  done </dev/stdin
+}
+
+commit_script=$(literate <<<"$commit_msg")
+if test -z "$commit_script"; then
+  echo "Nothing to replay (empty script)"
+  exit 0
+fi
+
+git -c sequence.editor="sed -ie '1s/^pick/edit/;1s/^p/e/'" \
+  rebase --interactive "${commit_sha}~1" 2>&1 >/dev/null
+
+git reset --soft "${commit_sha}^" 2>&1 >/dev/null
+
+git diff --name-only --cached | \
+  git stash --pathspec-from-file=- 2>&1 >/dev/null
+
+echo "$commit_sha"
+echo "Executing the commit script:"
+echo "$commit_script"
+
+if $(echo "$commit_script" | bash); then
+  echo "Replayed succeded"
+  git commit --reuse-message=ORIG_HEAD
+  git rebase --continue
+else
+  echo "Replayed failed"
+  git rebase --abort
+fi

@@ -25,3 +25,9 @@ link "$PWD/vscode/keybindings.json" "$VSCODE_CONFIG/keybindings.json"
 
 mkdir -p "$HOME/.ssh"
 link "$PWD/ssh_config" "$HOME/.ssh/config"
+
+mkdir -p "$HOME/.local/bin"
+for TOOL in "$PWD"/tools/*
+do
+  link "$TOOL" "$HOME/.local/bin/$(basename "$TOOL")"
+done
