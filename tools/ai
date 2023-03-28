@@ -14,7 +14,7 @@ You are a Linux command line assistant. You translate commands written in a natu
 
 def converse(question):
     completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[{"role": "system", "content": PROMPT},
                   {"role": "user", "content": question}],
         temperature=0.2
