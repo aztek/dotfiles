@@ -25,8 +25,7 @@ then
 else
   sudo add-apt-repository ppa:aos1/diff-so-fancy --yes
   sudo apt-get update --assume-yes
-  sudo apt install --assume-yes ack fish diff-so-fancy
-  cargo install exa
+  sudo apt install --assume-yes ack fish diff-so-fancy exa
 fi
 init_fish
 init_vim
