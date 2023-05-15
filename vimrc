@@ -11,6 +11,7 @@ Plug 'dag/vim-fish'
 call plug#end()
 
 colorscheme darcula
+set termguicolors
 
 syntax on                      " Turn on syntax highlighting
 filetype plugin indent on      " Automatically detect file type and indent size

@@ -15,7 +15,7 @@ init_vim() {
   curl --fail --location --output "$HOME/.vim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | bash
 
-  vim -es '+PlugInstall' '+qall!'
+  vim -e '+PlugInstall' '+qall!'
 }
 
 if [ "$(uname)" = "Darwin" ]
