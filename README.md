@@ -10,7 +10,7 @@
 - [iTerm2](https://iterm2.com/)
 - [Fish shell](https://fishshell.com/)
 - [ack](https://beyondgrep.com/) ("better grep")
-- [exa](https://github.com/ogham/exa) ("better ls")
+- [eza](https://github.com/eza-community/eza) ("better ls")
 - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) ("better diff")
 - [jq](https://stedolan.github.io/jq/)
 - [ncdu](https://dev.yorhel.nl/ncdu)
